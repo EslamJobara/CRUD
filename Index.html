@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Product App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="textHero">
+            <h1 class="header">Product Manager</h1>
+            <p class="infoHeader">Create & Manage Products Easily</p>
+        </div>
+
+        <div class="inputs">
+            <input class="inputText title" type="text" placeholder="Title">
+            <div class="fiveInputs">
+                <input class="inputText price" type="number" placeholder="Price">
+                <input class="inputText taxes" type="number" placeholder="Taxes">
+                <input class="inputText ads" type="number" placeholder="Ads">
+                <input class="inputText discount" type="number" placeholder="Discount">
+                <div class="total">
+                    <span class="totalT">Total:</span>
+                    <span class="totalR">0</span>
+                </div>
+            </div>
+            <input class="inputText count" type="number" placeholder="Count">
+            <input class="inputText category" type="text" placeholder="Category">
+            <button class="inputButton create">Create</button>
+        </div>
+
+<div class="twoInputs">
+    <input class="inputText searchByTitle" type="text" placeholder="Search by title" oninput="GetSearchMood(this.className); SearchData(this.value);">
+    <input class="inputText searchByCategory" type="text" placeholder="Search by category" oninput="GetSearchMood(this.className); SearchData(this.value);">
+    <button class="btn" onclick="handleSearch()">Search</button>
+</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+<button class="btn delete-all" id="deleteall">Delete All (0)</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
